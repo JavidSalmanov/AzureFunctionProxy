@@ -1,9 +1,10 @@
+[CmdletBinding()]
 param(
     [Parameter(Mandatory = $true, HelpMessage = "Resource Group Location")] [string] $location,
     [Parameter(Mandatory = $true, HelpMessage = "Resource Group Name")]  [string] $resourceGroupName,
     [Parameter(Mandatory = $true, HelpMessage = "Storage Account Name")]  [string] $storageAccount,
     [Parameter(Mandatory = $true, HelpMessage = "Azure Function name")]  [string] $functionAppName,
-    [Parameter(Mandatory = $true, HelpMessage = "Path to proxies.json file")]  [string] $proxesfilePath
+    [Parameter(Mandatory = $true, HelpMessage = "Path proxies.json file")]  [string] $proxesfilePath
 )
 
 #Login
