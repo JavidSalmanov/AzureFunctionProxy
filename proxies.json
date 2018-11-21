@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "get": {
+            "matchCondition": {
+                "route": "/",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "backendUri": "http://firstbackendurl"
+        },
+        "getrest": {
+            "matchCondition": {
+                "route": "{*restOfPath}",
+                "methods": [
+                    "GET"
+                ]
+            },
+            "backendUri": "http://firstbackendurl/{restOfPath}"
+        },
+        "post": {
+            "matchCondition": {
+                "route": "/",
+                "methods": [
+                    "POST"
+                ]
+            },
+            "backendUri": "http://secondbackendurl"
+        },
+        "postrest": {
+            "matchCondition": {
+                "route": "{*restOfPath}",
+                "methods": [
+                    "POST"
+                ]
+            },
+            "backendUri": "http://secondbackendurl/{restOfPath}"
+        }
+    }
+}
